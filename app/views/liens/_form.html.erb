@@ -1,0 +1,27 @@
+<center> 
+<%= form_for(@lien) do |f| %>
+  <% if @lien.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lien.errors.count, "error") %> prohibited this lien from being saved:</h2>
+
+      <ul>
+      <% @lien.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+        <table>
+          <tr><td><div id="message"><%= flash[:error] %></div></td><td></tr>
+          <tr>
+            <td colspan="2"><%= f.text_field :url_lien, :value => "Votre lien ...", :onFocus=>"javascript:this.value=''", :onblur=>"if(this.value == ''){javascript:this.value='Votre lien ...'}" %></td>
+          </tr>
+          <tr>
+            <td><img src="/images/text3.png"><p style="margin-top:0px;"><%= text_field :auteur, :pseudo_auteur, :value => "Votre nom ou pseudo ...", :onFocus=>"javascript:this.value=''", :onblur=>"if(this.value == ''){javascript:this.value='Votre nom ou pseudo ...'}" %></p></td>
+            <td><%= f.submit '', :onclick=>"javascript:this.disabled=1; this.form.submit(); this.value='VEUILLEZ PATIENTER...'"%></td>
+          </tr>
+        </table>
+      
+<% end %>
+</center>

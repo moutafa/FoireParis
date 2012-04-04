@@ -1,0 +1,121 @@
+<p color="yellow"><%= flash[:notice] %></p>
+<div id="liencontenu">
+<% @liens.each do |lien| %>
+  <% sum = LiensVote.where(:lien_id => lien.lien_id).first
+       if sum
+        sumvote = sum.sum_lien_votes_positifs
+       else
+         sumvote = 0
+       end
+    %>
+<div id="lienvip">
+  <a href="#apercu<%= lien.lien_id %>" rel="facebox" >
+  <table>
+    <tr>
+    <% if lien.id_twitter %>
+      <td style="padding-left:10px;padding-right:10px;" ><img src="http://api.twitter.com/1/users/profile_image/<%= lien.id_twitter %>.xml?size=bigger" class='imgTwitter'></td>
+    <%else%>
+      <td style="padding-left:10px;padding-right:10px;"><img src="/images/profile.jpg" ></td>
+    <%end%>
+      <td>
+        <table>
+          <tr>
+            <td colspan="5" style="padding-top:-5px;">
+              <span  class="vipName"><%= lien.prenom_auteur %> <%= lien.nom_auteur %> <%= lien.pseudo_auteur %></span><br/>
+              <span class='vipBlase'><%= lien.biographie_auteur %> 
+                <% if lien.id_twitter %>
+                  @<%= lien.id_twitter %>
+                <%end%>
+              </span>
+            </td>
+          </tr>
+          <tr><td colspan="5" width="600" class='vipContent'><span class="vipTitle"><b><u><%= lien.titre_lien %></u></b></span><br/><span><%= lien.description_lien %></span></td></tr>
+          <tr>
+            <td><div class="joieButton" rev="<%= sumvote %>" rel="<%= lien.lien_id%>"></div><%#= link_to image_tag("/images/aime.png"), {:controller => "fil_vip", :action => "vote_positif", :p => "fil", :idlien => lien.lien_id}, :class => "vote", :width => "40" %> </td>
+            <td>
+              <div class="fb-like" data-href="<%= lien.url_lien %>" data-text="Le fil de joie&nbsp;<%= lien.pseudo_auteur %> sur la Boite-à-joie <%= lien.url_lien %>" data-send="false" data-layout="button_count" data-width="" data-show-faces="false" data-action="like" data-colorscheme="light"></div>
+            </td>
+            <td>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-text="Le fil de joie&nbsp;<%=lien.pseudo_auteur %> sur la boite-à-joie" data-url="<%= lien.url_lien %>" data-via="foiredeparis" data-lang="fr" data-hashtags="foiredeparis"></a>
+              <!--script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script-->
+            </td>
+            <td><g:plusone annotation="none"></g:plusone></td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table style="background:url(<%= lien.image_lien%>);width:297px; height:202px">
+          <tr>
+            <td colspan="6" class="auteurlien">Offert par <%= lien.pseudo_auteur %></td>
+          </tr>
+            
+        </table>
+      </td>
+     
+       
+    </tr>
+    
+  </table>
+</a>
+</div>
+
+<div id="apercu<%= lien.lien_id%>" style="display:none;">
+  <table>
+    
+          <tr>
+            <td colspan="3"><table id="infolien" style="background:url(<%= lien.image_lien%>);width:297px; height:202px">
+              <tr>
+                <td colspan="3" class="auteurlien">Offert par <%= lien.pseudo_auteur %></td>
+              </tr>
+            
+            </table></td>
+              
+            
+            <td colspan="3">
+              <table>
+                  <tr>
+                    <td>
+                      <h3><%= text_field :titre, :lien, :value => lien.titre_lien, :readonly => true %></h3>
+                    </td>
+                  </tr> 
+                <tr>
+                  <td colspan="3"><%= text_area :desc, :lien, :value => lien.description_lien, :readonly=> true %><br/></td>
+                </tr>
+                <tr>
+                  <td><a href="<%= lien.url_lien %>" target="blank"><img src="/images/BThoverContent.png"></a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td><div class="fb-like" data-href="<%= lien.url_lien %>" data-text="Le fil de joie&nbsp;<%= lien.pseudo_auteur %> sur la boite-à-joie <%= lien.url_lien %>" data-send="false" data-layout="box_count" data-width="" data-show-faces="false" data-action="like" data-colorscheme="light"></div></td>
+            <td>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-text="Le fil de joie&nbsp;<%=lien.pseudo_auteur%> sur la boite-à-joie" data-url="<%= lien.url_lien %>" data-via="foiredeparis" data-lang="fr" data-hashtags="foiredeparis" data-count="vertical"></a>
+              <!--script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script-->
+            </td>
+            <td><g:plusone size="tall"></g:plusone></td>
+            <td><div class="joieButton" rev="<%= sumvote %>" rel="<%= lien.lien_id%>"></div><%#= link_to image_tag("/images/aime.png", :width => '20'), {:controller => "home", :action => "vote_positif", :idlien => lien.lien_id}, :class => "vote" %><span style="font-size:12px"><%#= sumvote %></span></td>
+          </tr>
+          <tr height="2"></tr>
+          <tr>
+            <td colspan="3" style="position: relative;top: 10px;">
+              <div class="menupopup">
+                <a href="/lien/new?p=home" class="new"></a>
+                <a href="/fil_vip/index?p=vip" class="filvip" ></a>
+                <a href="/fil_joie/index?p=fil" class="lefil" ></a>
+              </div>
+            </td>
+            <td><div class="signaler"><%= link_to image_tag("/images/TitleHoverSignalez.png"), :controller => 'home', :action => 'index', :idlien => lien.lien_id, :url => lien.url_lien %></div></td>
+          </tr>
+        </table>
+  <br/>
+  <!--img src="https://www.apercite.fr/api/apercite/640x480/oui/oui/<%#= lien.url_lien %>"-->
+</div>
+
+<% end %>
+</div>
+<div id="pagination" class='vip'>
+  <center>
+    <%= will_paginate @liens, :previous_label => "<< Precedent", :next_label => "Suivant >>"%>
+  </center>
+</div>

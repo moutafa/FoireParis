@@ -1,0 +1,49 @@
+#contenu {
+  border-top:2px solid #000;
+  background:#d01b6d;
+}
+h1{
+	border-bottom:1px solid #ccc;
+	font-size:11px;
+	font-weight:bold;
+	letter-spacing:2px
+	text-transform:uppercase;
+}
+input[type="submit"]
+{
+  width:115px;
+  height:48px;
+  margin-top:28px;
+  margin-left:20px;
+  border: 0.1px solid #fe198e;
+  background-color:#fe198e;
+  background-image:url("/images/ok.png");
+  background-repeat:no-repeat;
+}
+input[type=submit]:active {
+  background-image:url("/images/loading.gif");
+  color:#000;
+}
+
+#blocleft{
+  width:100%;
+  background:#fe198e;
+  height:245px;
+}
+#blocleft form {
+  border:0px solid #aaa
+	margin:5px auto 0;
+	padding:20px;
+	width:540px;
+  margin-top:10px;
+  margin-left:270px;
+}
+#header {
+  height:423px;
+}
+#sous {
+  height: 215px;
+  width:1011px;
+  background-image: url("/images/sousentetee.jpg");
+  background-repeat: no-repeat;
+}

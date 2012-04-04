@@ -1,0 +1,28 @@
+
+<%= flash[:notice] %>
+<div class="form">
+<center>
+<p id="notice">
+	<%= flash[:warning] %>
+</p>
+  	<%= form_tag  :controller => 'authentification', :action => 'sign_in', :id => 'sign_in' do %>
+  	<table id="authentif">
+  		<tr>
+  			<th colspan="2" style="font-size: 18px; padding: 5px" >Authentification</th>
+  		</tr>
+
+  		<tr>
+  			<td><%= label_tag :Login %></td>
+  			<td><%= text_field :user, :pseudo_auteur, :class=>"txt" %></td>
+  		</tr>
+  		<tr>
+  			<td><%= label_tag :Password %></td>
+  			<td><%= password_field :user,:mot_de_passe, :class=>"txt" %></td>
+  		</tr>
+  		<tr>
+  			<td align="right" colspan="2"><br /><%= submit_tag "Se connecter", :class=>"btn", :id => 'signin_submit'%></td>
+  		</tr>
+  	</table>
+    <% end %>
+ </center>
+ </div>

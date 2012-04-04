@@ -1,0 +1,40 @@
+#contenu {
+    width: 100%;
+background-color: #85DEEE;
+clear: both;
+display: block;
+overflow: hidden;
+padding: 25px 0;
+     
+}
+
+#partage {
+  border-top:0px solid #000;
+  height:50px;
+  width:100%;
+}
+
+#menu{
+  position:relative;
+  top:-30px;
+  display:block;
+  height:230px;
+  font-size:14px;
+  font-weight:bold;
+  margin-top:30px;
+  font-family:Arial,Verdana,Helvitica,sans-serif;
+  border-top:0px solid #B30000;}
+#menu ul{margin:auto;padding:0;list-style-type:none; width: 960px; }
+#menu ul li{display:block;float:left;margin:0;}
+#menu ul li a{display:block;float:left;margin-left:110px;color:#666;text-decoration:none;padding:11px 10px 0 10px;height:26px;}
+#menu ul li a:hover,#menu ul li a.current{color:#B30000;}
+
+#header {
+  height:730px;
+}
+#sous {
+  height: 300px;
+  width:1011px;
+  margin-top:-55px;
+  
+}

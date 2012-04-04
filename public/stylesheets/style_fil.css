@@ -1,0 +1,23 @@
+#contenu {
+  border-top: 2px solid black;
+background: #5A308D;
+display: block;
+overflow: hidden;
+width: 991px;
+padding: 15px 2px 15px 18px;
+}
+
+#tri {
+  margin-left:20px;
+  height:30px;
+}
+
+#header {
+  height:423px;
+}
+#sous {
+  height: 215px;
+  width:1011px;
+  background-image: url("/images/sousentetee.jpg");
+  background-repeat: no-repeat;
+}

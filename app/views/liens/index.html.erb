@@ -1,0 +1,39 @@
+<h1>Listing liens</h1>
+
+<table>
+  <tr>
+    <th>Titre lien</th>
+    <th>Description lien</th>
+    <th>Url lien</th>
+    <th>Image lien</th>
+    <th>Deleted</th>
+    <th>Create by</th>
+    <th>Update by</th>
+    <th>Delete by</th>
+    <th>Deleted at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @liens.each do |lien| %>
+  <tr>
+    <td><%= lien.titre_lien %></td>
+    <td><%= lien.description_lien %></td>
+    <td><%= lien.url_lien %></td>
+    <td><%= lien.image_lien %></td>
+    <td><%= lien.deleted %></td>
+    <td><%= lien.create_by %></td>
+    <td><%= lien.update_by %></td>
+    <td><%= lien.delete_by %></td>
+    <td><%= lien.deleted_at %></td>
+    <td><%= link_to 'Show', lien %></td>
+    <td><%= link_to 'Edit', edit_lien_path(lien) %></td>
+    <td><%= link_to 'Destroy', lien, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lien', new_lien_path %>

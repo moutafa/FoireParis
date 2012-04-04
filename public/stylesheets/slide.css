@@ -1,0 +1,26 @@
+#sliderHome ul {
+				list-style: none;
+				padding: 0;
+				width: 381px;
+				height: 295px;
+        
+			}
+			#sliderHome li {
+				height: 285px;
+				overflow:hidden;
+				width: 381px;
+				background-color:;
+				text-align: center;
+				cursor: pointer;
+				
+			}
+			
+			#sliderHome li a {
+				height: 195px;
+				width: 297px;
+				display:block;
+			}
+			
+			#sliderHome li.roundabout-in-focus {
+					cursor: default;
+				}

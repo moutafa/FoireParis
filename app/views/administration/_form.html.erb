@@ -1,0 +1,86 @@
+<%= form_for(@auteur) do |f| %>
+  <% if @auteur.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@auteur.errors.count, "error") %> prohibited this auteur from being saved:</h2>
+
+      <ul>
+      <% @auteur.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <h1>Nouvel utilisateur</h1>
+  <table>
+    <tr>
+      <td><%= f.label :prenom_auteur %></td>
+      <td><%= f.text_field :prenom_auteur%></td>
+    </tr>
+    <tr>
+      <td><%= f.label :nom_auteur %></td>
+      <td><%= f.text_field :nom_auteur %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :biographie_auteur %></td>
+      <td><%= f.text_area :biographie_auteur, :rows => '5', :cols => '29' %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :pseudo_auteur %></td>
+      <td><%= f.text_field :pseudo_auteur, :onFocus=>"javascript:this.value=''", :onblur=>"if(this.value == ''){javascript:this.value='Anonyme'}" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :mot_de_passe %></td>
+      <td><%= f.password_field :mot_de_passe %></td>
+    </tr>
+    <font size="3">Ne mettez pas le @ devant l'identifiant twitter</font>
+    <tr>
+      <td><%= f.label :id_twitter %></td>
+      <td>@<%= f.text_field :id_twitter %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :email %></td>
+      <td><%= f.email_field :email %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :ville %></td>
+      <td><%= f.text_field :ville %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :age %></td>
+      <td><%= f.text_field :age, :size => '5' %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :adresse %></td>
+      <td><%= f.text_field :adresse %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :site_auteur %></td>
+      <td><%= f.text_field :site_auteur %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :sexe %></td>
+      <td>
+        <%= f.radio_button :sexe, "male" %>M  <br/>
+        <%= f.radio_button :sexe, "female" %>F
+      </td>
+    </tr>
+    <tr>
+      <td><%= label :user, :lien %></td>
+      <td><%= text_field :lien, :user %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <% @role = Role.all %>
+        <% @role.each do |role| %>
+            <%= check_box_tag role.description_role, role.id %><%= role.description_role.upcase %><br/>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td><%= hidden_field :user, :id, :value => ''%></td>
+      <td><%= f.submit 'Ajouter'%></td>
+    </tr>
+  </table>
+
+<% end %>

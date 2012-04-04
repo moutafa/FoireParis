@@ -1,0 +1,51 @@
+#contenu {
+  border-top:10px solid black;
+}
+#monlien form {
+  margin-top:0px;
+  margin-left:0px;
+}
+#form form {
+  margin-top: 0px;
+}
+input[type=submit]{
+  width:102px;
+  height:48px;
+  background:url("/images/BTFormValier.png");
+  border-color:black;
+}
+form label{
+	color:#fff;
+}
+#user {
+
+    border-top: 10px solid black;
+    margin-bottom: 0px;
+    background-color: black;
+    height: 620px;
+    background-image: url("/images/formTexte.png");
+    background-repeat: no-repeat;
+
+}
+
+#userOK {
+  margin-bottom:0px;
+  padding-left:300px;
+  height:390px;
+  margin-top:-20px;
+  padding-top:50px;
+  
+  background-color:#fe198e;
+}
+#header {
+  height:215px;
+}
+#sous {
+  height: 215px;
+  width:1011px;
+  background-image: url("/images/sousentetee.jpg");
+  background-repeat: no-repeat;
+}
+#face {
+  margin-top:-50px;
+}

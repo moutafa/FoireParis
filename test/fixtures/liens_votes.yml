@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  lien_id: 1
+  sum_lien_votes_positifs: 
+  sum_liens_votes_negatifs: 
+  create_by: MyString
+  update_by: MyString
+  delete_by: MyString
+  created_at: 2012-01-23 15:53:42
+  updated_at: 2012-01-23 15:53:42
+  deleted_at: 2012-01-23 15:53:42
+
+two:
+  lien_id: 1
+  sum_lien_votes_positifs: 
+  sum_liens_votes_negatifs: 
+  create_by: MyString
+  update_by: MyString
+  delete_by: MyString
+  created_at: 2012-01-23 15:53:42
+  updated_at: 2012-01-23 15:53:42
+  deleted_at: 2012-01-23 15:53:42

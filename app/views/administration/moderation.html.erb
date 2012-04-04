@@ -1,0 +1,30 @@
+<h1>Administration#moderation</h1>
+<div id="trier">
+  <%= link_to "Liens signalés", :controller => "administration", :action => "moderation", :tri => "signale"%>
+    <%= link_to "Liens plus de joie", :controller => "administration", :action => "moderation", :tri => "vote"%>
+</div>
+<div id="moderation">
+<table>
+   <tr>
+     <td>Image du lien</td>
+     <td>URL du lien</td>
+     <td>Titre du lien</td>
+     <td>Auteur du lien</td>
+     <td>Pseudo Auteur</td>
+     <td>Nombre de votes</td>
+   </tr>
+<% @liens.each do |lien| %>
+    <tr>
+      <td><img src="<%= lien.image_lien %>" alt="" width="102" height="100"></td>
+      <td><%= lien.url_lien %></td>
+      <td><%= lien.titre_lien %></td>
+      <td><%= lien.prenom_auteur %> <%= lien.nom_auteur %></td>
+      <td><%= lien.pseudo_auteur %></td>
+      <td><%= lien.sum_lien_votes_positifs if params[:tri] == "vote" %></td>
+      <td><%= link_to 'Supprimer', :controller => 'administration', :id => lien.lien_id, :action =>'destroy' %></td>
+    </tr>
+
+<% end %>
+<tr><td colspan="8"><%= will_paginate @liens %></td></tr>
+ </table>
+ </div>

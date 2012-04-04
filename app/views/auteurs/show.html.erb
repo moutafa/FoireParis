@@ -1,0 +1,63 @@
+<div id="userOK">
+  
+  <% if @auteur.id_facebook 
+      @id = @auteur.id_facebook
+      url = "https://graph.facebook.com/"+@id.to_s+"/picture?type=large"
+      else
+        url = "/images/profile.jpg"
+      end
+      
+      
+      
+  %>
+  
+<div id="badge">
+	
+		<div class="tools">
+			
+			<div class="type1" rev="1">
+				<p align="center"><a href="#"></a></p>
+			</div>
+			<div class="type2" rev="2">
+				<p align="center"><a href="#"></a></p>
+			</div>
+			<div class="type3" rev="3">
+				<p align="center"><a href="#"></a></p>
+			</div>	
+			
+			<div class="random" rev="rand">
+				<p align="center"><a href="#"></a></p>
+			</div>	
+			
+		</div>
+		
+		<div class="show">
+		
+			<img rev= <%= url %> >
+      
+			<a href="#" id="addtoprofile"></a>
+		</div>
+		
+	
+	</div>
+<!-- div style="float:left; width:90px; ">
+  <p><img src="/images/Untitled1.png"></p>
+  <p><img src="/images/Untitled3.png"></p>
+  <p><img src="/images/Untitled4.png"></p>
+</div>
+<div style="float:left;padding-right:30px;">
+  <p style="background-image:url(<%= url %>);margin-left:25px;background-image:no-repeat; width:150px; height:170px;">
+    <br/><br/><br/><br/><br/><br/>
+    <img src="/images/Untitled2.png" align="right">
+  </p>
+  </div>
+  <p>&nbsp;</p -->
+  
+
+<div style="background:#fff;width:292px; float:left; height:294px;margin-left:176px" >
+  <center>
+    <div class="fb-like-box" data-href="https://www.facebook.com/foire.de.paris" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
+  </center>
+</div>
+
+</div>

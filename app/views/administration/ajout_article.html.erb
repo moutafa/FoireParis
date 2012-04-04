@@ -1,0 +1,6 @@
+<h1>Administration#ajout_article</h1>
+<p>Find me in app/views/administration/ajout_article.html.erb</p>
+<% form_tag (:action => "ajout_article", :method => 'post', :multipart => true) do %>
+<%= text_area :article, :class => "mceEditor" %></br>
+<%= submit_tag 'Poster'%>
+<% end %>

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code role:</b>
+  <%= @role.code_role %>
+</p>
+
+<p>
+  <b>Description role:</b>
+  <%= @role.description_role %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @role.deleted %>
+</p>
+
+<p>
+  <b>Create by:</b>
+  <%= @role.create_by %>
+</p>
+
+<p>
+  <b>Update by:</b>
+  <%= @role.update_by %>
+</p>
+
+<p>
+  <b>Delete by:</b>
+  <%= @role.delete_by %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @role.deleted_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_role_path(@role) %> |
+<%= link_to 'Back', roles_path %>

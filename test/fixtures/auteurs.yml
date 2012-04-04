@@ -1,0 +1,37 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  prenom_auteur: MyString
+  nom_auteur: MyString
+  mot_de_passe: MyString
+  salt: MyString
+  id_facebook: MyString
+  biographie_auteur: MyString
+  id_twitter: MyString
+  site_auteur: MyString
+  changer_mot_de_passe: 1
+  peut_changer_mdp: 1
+  date_validite: 2012-01-23 15:18:57
+  deleted: false
+  create_by: MyString
+  update_by: MyString
+  delete_by: MyString
+  deleted_at: 2012-01-23 15:18:57
+
+two:
+  prenom_auteur: MyString
+  nom_auteur: MyString
+  mot_de_passe: MyString
+  salt: MyString
+  id_facebook: MyString
+  biographie_auteur: MyString
+  id_twitter: MyString
+  site_auteur: MyString
+  changer_mot_de_passe: 1
+  peut_changer_mdp: 1
+  date_validite: 2012-01-23 15:18:57
+  deleted: false
+  create_by: MyString
+  update_by: MyString
+  delete_by: MyString
+  deleted_at: 2012-01-23 15:18:57

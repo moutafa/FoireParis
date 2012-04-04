@@ -1,0 +1,454 @@
+
+body {
+width : 100%;
+font-family:arial;
+background-color:#5a308d;
+}
+
+#partage {
+
+    height: 65px;
+    width: 100%;
+    background: #CCC;
+
+}
+
+#conteneur {
+
+    width: 1011px;
+    margin: 0 auto;
+    overflow: hidden;
+    clear: both;
+
+}
+#facebox .content {
+    background-image:url("/images/BGHoverFil.png");
+    background-position:bottom left;
+    background-repeat:no-repeat;
+}
+
+.menupopup {
+  height:30px;
+  position: relative;
+  top: 15px;
+}
+.new {
+  display: block;
+    height: 30px;
+    width: 99px;
+    background: url("/images/BThoverSmall.png") top left no-repeat;
+    float: left
+}
+.filvip {
+  display: block;
+    height: 30px;
+    width: 109px;
+    background: url("/images/BThoverSmall.png");
+    background-position: -99px 0;
+    float: left;
+}
+.lefil {
+  display: block;
+    height: 30px;
+    width: 88px;
+    background: url("/images/BThoverSmall.png");
+    background-position: -209px 0;
+    float: left;
+}
+
+#header {
+  background-image: url("/images/HeaderNewsansLogo.jpg");
+  background-repeat:no-repeat;
+}
+
+#logo {
+  height: 240px;
+  width:1011px;
+  
+}
+
+.login-fb {
+    background:url("/images/BTFormFBConnect.png") top left no-repeat;
+    width : 269px; 
+    height : 45px;
+    overflow:hidden;
+}
+
+#share {
+  position:relative;
+  display:block;
+  width:260px;
+  padding:0px 20px;
+  height:26px;
+  
+}
+#share ul{
+   margin:auto;padding:0;list-style-type:none;
+}
+#share ul li {display:block;float:left;}
+#share ul li a{display:block;float:left;margin-left:0px;text-decoration:none;padding-left: 5px;}
+#share ul .facebook{
+  width:65px;
+}
+#share ul .twitter{
+  width:75px;
+}
+#share ul .google{
+  width:55px;
+padding-top:2px;
+}
+#partage {
+  border-bottom:0px solid #000;
+  height:65px;
+  width:100%;
+}
+
+span .texte {
+  font-size:12px;
+}
+
+
+#blocright{
+  float:left;
+  width:48%;
+  border:2px solid #ccc;
+}
+#lien img {
+  border:3px solid #E4E4EA;
+}
+#lien {
+  width:297px;
+  height:260px;
+  float:left;
+  margin:12px;
+    
+}
+#lien a {
+  text-decoration:none;
+}
+
+img {
+  border:none;
+}
+
+#infolien:hover {
+  background:#B5BBBE;
+}
+
+.vote {
+  color:blue;
+  text-decoration:none;
+  
+  border:0px solid #ccc;
+}
+
+#tri {
+  margin-bottom:10px;
+}
+
+.joie{
+  text-decoration:none;
+  
+}
+
+.joie:visited:active {
+  color:#5ebe90 ;
+}
+
+#user_add {
+    
+    border-radius: 15px 15px 15px 15px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+#user_id h1 {
+    color:#204228;
+    text-align: center;
+}
+
+table #ajout_lien {
+    background-color:#ccffff ;
+}
+
+#footer {
+  background: black;
+height: 75px;
+padding: 25px;
+}
+
+#footer p a {
+
+    text-decoration: none;
+    padding: 0px 9px;
+    font-size: 14px;
+    font-family: arial;
+    color: #D2D1D1;
+    letter-spacing: 2px;
+
+}
+.footerlorem {
+  color: #d2d1d1; 
+    font-size: 10px;
+    text-align: justify;
+    font-family: Arial;
+    margin: 15px;
+    margin-top:73px;
+}
+.lienfooter {
+  display:block;
+  width:100%;
+}
+.logoFP {
+  float:left;
+  width:80px;
+  height:40px;
+}
+
+.lienFP {
+
+    text-align: center;
+    float: left;
+    width: 854px;
+    padding: 12px 0 0 0;
+
+}
+
+#footer p a:after {
+  
+  font-size:24px;
+  font-family:bold;
+  color:#fff;
+}
+
+
+#moderation table {
+
+    overflow:hidden;
+    border:1px solid #d3d3d3;
+    background:#fefefe;
+    width:70%;
+    margin:5% auto 0;
+    -moz-border-radius:5px; /* FF1+ */
+    -webkit-border-radius:5px; /* Saf3-4 */
+    border-radius:5px;
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+#moderation table tr td {
+    padding:8px 18px 8px; text-align:center;
+    border-top:1px solid #e0e0e0; border-right:1px solid #e0e0e0;
+    background: -moz-linear-gradient(100% 25% 90deg, #fefefe, #f9f9f9);
+    background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f9f9f9), to(#fefefe));
+}
+
+#pagination {
+       font-family: Arial;
+       text-transform: uppercase;
+       font-size: 20px; 
+       width: 100%;
+clear: both;
+height: 25px;    
+padding: 25px 0 0;
+}
+
+#pagination .previous_page {
+       float:left;        
+       margin: 0 0 0 15px;        
+}
+#pagination .next_page {
+       float:right;        
+       margin: 0 15px 0 0;        
+       
+}
+
+#pagination .disabled {
+       opacity : 0.5;
+}
+
+#pagination a {
+       padding : 5px;
+       text-decoration : none;        
+}
+
+#pagination a.next_page, #pagination a.previous_page {
+       padding : 0;
+}
+#pagination.fil  {
+       color: #00E1FF;
+}
+
+#pagination.fil a   {
+       color: #00E1FF;
+
+}
+
+#pagination.fil a:hover   {
+       color: #000;
+       background : #00E1FF;
+}
+#pagination.vip  {
+       color: #d91057;
+}
+
+#pagination.vip a   {
+       color: #d91057;
+
+}
+
+#pagination.vip a:hover   {
+       color: #000;
+       background : #d91057;
+}
+#lien_url_lien {
+  width:330px;
+}
+.auteurlien {
+
+    color: #0F6279;
+    font-size: 18px;
+    text-align: right;
+    text-decoration: none;
+    padding: 113px 25px 0 0;
+    background: url("/images/RubanPhoto.png") 58px 140px no-repeat;
+    position: relative;
+    right: -2px;
+
+}
+
+.signaler {
+  padding: 7px 44px 0.1px 31px;
+}
+.signaler a {
+position:relative;
+top : 10px;
+}
+
+form{
+	border:0px solid #aaa
+	margin:5px auto 0;
+	padding:20px;
+	width:540px;
+  margin-top:110px;
+  margin-left:270px;
+}
+form p{
+	margin-bottom:20px;
+}
+form p:last-child{ /* Sélecteur avancé pour sélectionner le dernier paragraphe du formulaire */
+	margin-bottom:0;
+}
+label{
+	cursor:pointer;
+	display:block;
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	line-height:28px;
+	margin-bottom:5px;
+	width:120px;
+}
+form p:hover label{
+	color:#0459b7;
+}
+form p:hover label:after{
+	content:" »";
+}
+td textarea {
+  background: rgba(255, 255, 255, 0.9);
+	background:-moz-linear-gradient(90deg, #eee, #fff); /* Firefox */
+	background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff), color-stop(0.2, #fff)); /* Webkit */
+	border:0px solid #aaa;
+  color:#000;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-box-shadow:0 0 3px #aaa;
+	-webkit-box-shadow:0 0 3px #aaa;
+	padding:5px;
+  height:110px;
+}
+textarea,
+input[type=text],
+input[type=email],
+input[type=password]{
+	background: rgba(255, 255, 255, 0.9);
+	background:-moz-linear-gradient(90deg, #eee, #fff); /* Firefox */
+	background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff), color-stop(0.2, #fff)); /* Webkit */
+	border:0px solid #aaa;
+  color:#000;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-box-shadow:0 0 3px #aaa;
+	-webkit-box-shadow:0 0 3px #aaa;
+	padding:5px;
+  height:26px;
+}
+textarea:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus{
+	border-color:0px solid #093c75;
+	-moz-box-shadow:0 0 3px #0459b7;
+	-webkit-box-shadow:0 0 3px #0459b7;
+	outline:none; /* Pour enlever le contour jaune lorsque l'on sélectionne un input dans Chrome */
+}
+select{
+	cursor:pointer;
+	padding:3px;
+	-moz-box-shadow:0 0 3px #aaa;
+	-webkit-box-shadow:0 0 3px #aaa;
+}
+select:active,
+select:focus{
+	border:1px solid #093c75;
+	-moz-box-shadow:0 0 3px #0459b7;
+	-webkit-box-shadow:0 0 3px #0459b7;
+	outline:none;
+}
+
+input[type=submite],
+a.submite{
+	background:#ddd;
+	background:-moz-linear-gradient(90deg, #0459b7, #08adff); /* Firefox */
+	background:-webkit-gradient(linear, left top, left bottom, from(#08adff), to(#0459b7)); /* Webkit */
+	border:1px solid #093c75;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-box-shadow:0 1px 0 #fff;
+	-webkit-box-shadow:0 1px 0 #fff;
+	color:#fff;
+	cursor:pointer;
+	font-family:Arial,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	margin-left:120px;
+	padding:5px 10px;
+	text-decoration:none;
+	text-shadow:0 1px 1px #333;
+	text-transform:uppercase;
+}
+input[type=submite]:hover,
+a.submite:hover{
+	background:#eee;
+	background:-moz-linear-gradient(90deg, #067cd3, #0bcdff);
+	background:-webkit-gradient(linear, left top, left bottom, from(#0bcdff), to(#067cd3));
+	border-color:#093c75;
+	text-decoration:none;
+}
+input[type=submite]:active,
+input[type=submite]:focus,
+a.submite:active,
+a.submite:focus{
+	background:#ccc;
+	background:-moz-linear-gradient(90deg, #0bcdff, #067cd3);
+	background:-webkit-gradient(linear, left top, left bottom, from(#067cd3), to(#0bcdff));
+	border-color:#093c75;
+	outline:none;
+}

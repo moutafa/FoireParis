@@ -1,0 +1,35 @@
+<h1>Listing roles</h1>
+
+<table>
+  <tr>
+    <th>Code role</th>
+    <th>Description role</th>
+    <th>Deleted</th>
+    <th>Create by</th>
+    <th>Update by</th>
+    <th>Delete by</th>
+    <th>Deleted at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @roles.each do |role| %>
+  <tr>
+    <td><%= role.code_role %></td>
+    <td><%= role.description_role %></td>
+    <td><%= role.deleted %></td>
+    <td><%= role.create_by %></td>
+    <td><%= role.update_by %></td>
+    <td><%= role.delete_by %></td>
+    <td><%= role.deleted_at %></td>
+    <td><%= link_to 'Show', role %></td>
+    <td><%= link_to 'Edit', edit_role_path(role) %></td>
+    <td><%= link_to 'Destroy', role, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Role', new_role_path %>

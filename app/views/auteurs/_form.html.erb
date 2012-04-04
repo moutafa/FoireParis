@@ -1,0 +1,95 @@
+<div id="user" >
+  <div style="margin-left:280px;margin-top:120px;">
+  <table>
+    <tr>
+    <td>
+      <div class="login-fb"></div></td>
+      <td>
+        <%= link_to_function image_tag("/images/BTFormShowForm.png") do |page|
+                page.visual_effect(:appear, "form")
+                page.visual_effect(:fade, "monlien")
+            end
+        %>
+      </td>
+    </tr>
+  </table>
+</div>
+  <div id="monlien" style="margin-left:280px;margin-top:0px;">
+    <% if params[:idlien]%>
+    <% @liens = Lien.find(params[:idlien]) %>
+    <% if @liens.titre_lien == "" %>
+      <img src="https://www.apercite.fr/api/apercite/320x240/oui/oui/<%= @liens.url_lien %>" height="155" width="300">
+    <%else%>
+      <img src="<%= @liens.image_lien %>" height="185" width="250">
+    <% end %>
+    
+    <% @lien = Lien.find(params[:idlien]) %>
+    <%= form_tag :id=> params[:idlien], :controller => 'liens', :action =>'modifier_lien' do%>
+    <table>
+      <%= hidden_field :auteur, :pseudo_auteur, :value => params[:auteur], :idauteur => params[:idauteur]%>
+          <tr>
+            <td><%= text_field_tag :lien, :url_lien, :id=> params[:idlien], :value => @lien.url_lien, :onFocus=>"javascript:this.value=''", :onblur=>"if(this.value == ''){javascript:this.value='#{@lien.url_lien}'}" %></td>
+            <td><%= submit_tag ''%></td>
+          </tr>
+          
+        </table>
+    <%end%>
+    <%end%>
+  </div>
+  <div id="form" style="display:none; ">
+<%= form_for(@auteur) do |f| %>
+  <% if @auteur.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@auteur.errors.count, "error") %> prohibited this auteur from being saved:</h2>
+
+      <ul>
+      <% @auteur.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  
+  <img src="/images/TitleFormCoordonnees.png">
+  <div class="field">
+    <%= f.text_field :prenom_auteur, :size=>"20", :id => 'prenom_auteur', :value => "Prénom", :onFocus=>"javascript:this.value=''", :onblur=>"if(this.value == ''){javascript:this.value='Prénom'}" %>
+    <%= f.text_field :nom_auteur, :size=>"20", :id => 'nom_auteur', :value => "Nom", :onFocus=>"javascript:this.value=''", :onblur=>"if(this.value == ''){javascript:this.value='Nom'}" %>
+  </div>
+  <br/>
+  <div class="field">
+    <%= f.text_field :email, :size=>"43", :id => 'email_auteur', :value => "Adresse e-mail", :onFocus=>"javascript:this.value=''", :onblur=>"if(this.value == ''){javascript:this.value='Adresse e-mail'}" %>
+  </div>
+  <br/>
+  <div class="field">
+    <%= f.text_field :ville, :size=>"43", :id => 'ville_auteur', :value => "Ville", :onFocus=>"javascript:this.value=''", :onblur=>"if(this.value == ''){javascript:this.value='Ville'}" %>
+  </div>
+  <br/>
+  <div class="field">
+    <%= f.text_field :contact, :size=>"43", :value => "Code postal", :onFocus=>"javascript:this.value=''", :onblur=>"if(this.value == ''){javascript:this.value='Code postal'}" %>
+  </div>
+  <br/>
+  <div class="field">
+    <%= f.text_field :age, :size=>"5", :id => 'age_auteur', :value => "Age", :onFocus=>"javascript:this.value=''", :onblur=>"if(this.value == ''){javascript:this.value='Age'}" %>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <font color="white">Sexe</font>
+    <%= f.radio_button :sexe, "male", :id => 'genre' %><font color="white">M</font>
+    <%= f.radio_button :sexe, "female", :id => 'genre' %><font color="white">F</font>
+  </div>
+  <div class="field">
+    
+  </div>
+    <%#= f.label :id_facebook %><br />
+    <%= f.hidden_field :id_facebook, :id => 'id_facebook' %>
+    <%= hidden_field :lien, :idlien, :value => params[:idlien]%>
+  <%= hidden_field :user, :id, :value => params[:id]%>
+  <div class="actions">
+    <%= f.check_box :deleted, :id => "key" %>
+    <font color="white">J’accepte de recevoir des informations<br/> de la part de la Foire de Paris</font>
+    <br/><br/>
+    <%= f.submit "" %>
+  </div>
+
+<% end %>
+</div>
+</div>

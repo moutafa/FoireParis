@@ -1,0 +1,77 @@
+body {
+width: 100%;
+font-family: Arial;
+}
+
+#contenu {
+border-top: 2px solid black;
+background: #8BCB37;
+display: block;
+}
+
+.imgTwitter {
+border: 3px solid #8BCB37;
+}
+
+.vipName {
+color : #1a1a1a;
+font-size : 20px;
+text-transform: capitalize;
+}
+
+.vipBlase {
+color : #191919;
+font-size : 12px;
+text-transform: uppercase;
+}
+
+.vipTitle {
+color : #d91057;
+font-size : 12px;
+text-decoration : underline;
+display:block;
+margin : 0 0 -6px 0;
+}
+
+.vipContent {
+color : #1a1a1a;
+font-size : 12px;
+
+}
+
+.tdAuthor {
+padding-left: 10px;
+padding-right: 10px;
+display: inline;
+}
+
+.vipImg {
+border: 3px solid #E4E4EA;
+}
+
+#partage {
+  border-bottom:2px solid #000;
+  height:50px;
+  width:100%;
+}
+a {
+  text-decoration:none;
+}
+
+#lienvip {
+  background:#fff;
+  margin-top:15px;
+  margin-left:70px;
+  margin-right:70px;
+  padding-top:-10px;
+}
+
+#header {
+  height:423px;
+}
+#sous {
+  height: 215px;
+  width:942px;
+  background-image: url("/images/sousentetee.jpg");
+  background-repeat: no-repeat;
+}
